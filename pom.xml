@@ -6,12 +6,12 @@
 
     <groupId>io.github.dao1230source</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.2-beta</version>
+    <version>0.0.3-beta</version>
     <packaging>pom</packaging>
 
     <name>parent</name>
-    <description>parent pom.xml of io.github.dao1230source</description>
-    <url>https://github.com/Dao1230source/spring-cache-configure-starter.git</url>
+    <description>parent pom of io.github.dao1230source</description>
+    <url>https://github.com/Dao1230source/parent.git</url>
 
     <licenses>
         <license>
@@ -30,30 +30,20 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/Dao1230source/spring-cache-configure-starter.git</connection>
-        <developerConnection>scm:git:ssh://github.com:Dao1230source/spring-cache-configure-starter.git
-        </developerConnection>
-        <url>https://github.com/Dao1230source/spring-cache-configure-starter/tree/master</url>
+        <connection>scm:git:git://github.com/Dao1230source/parent.git</connection>
+        <developerConnection>scm:git:ssh://Dao1230source/parent.git</developerConnection>
+        <url>https://github.com/Dao1230source/parent/tree/master</url>
     </scm>
 
     <properties>
-        <!--系统模块-->
-        <org.source.user-api.version>0.0.1-SNAPSHOT</org.source.user-api.version>
-        <org.source.user-facade.version>0.0.1-SNAPSHOT</org.source.user-facade.version>
-        <!-- business -->
-        <biz-web-starter.version>0.0.1-SNAPSHOT</biz-web-starter.version>
-        <biz-web-api.version>0.0.1-SNAPSHOT</biz-web-api.version>
-        <biz-spring-starter.version>0.0.1-SNAPSHOT</biz-spring-starter.version>
         <!-- jpa -->
-        <jpa-extension-starter.version>0.0.1-SNAPSHOT</jpa-extension-starter.version>
-        <!-- log -->
-        <data-change-log-starter.version>0.0.1-SNAPSHOT</data-change-log-starter.version>
+        <jpa-extension-starter.version>0.0.3-beta</jpa-extension-starter.version>
         <!-- spring-->
-        <spring-extension-starter.version>0.0.1-SNAPSHOT</spring-extension-starter.version>
+        <spring-extension-starter.version>0.0.3-beta</spring-extension-starter.version>
         <!-- utility -->
-        <org.source.utility.version>0.0.1-SNAPSHOT</org.source.utility.version>
+        <org.source.utility.version>0.0.3-beta</org.source.utility.version>
         <!-- web -->
-        <web-extension-starter.version>0.0.1-SNAPSHOT</web-extension-starter.version>
+        <web-extension-starter.version>0.0.3-beta</web-extension-starter.version>
         <!--maven-->
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
@@ -100,43 +90,27 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- business -->
-            <dependency>
-                <groupId>org.source</groupId>
-                <artifactId>biz-web-starter</artifactId>
-                <version>${biz-web-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.source</groupId>
-                <artifactId>biz-web-api</artifactId>
-                <version>${biz-web-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.source</groupId>
-                <artifactId>biz-spring-starter</artifactId>
-                <version>${biz-spring-starter.version}</version>
-            </dependency>
             <!-- jpa -->
             <dependency>
-                <groupId>org.source</groupId>
+                <groupId>io.github.dao1230source</groupId>
                 <artifactId>jpa-extension-starter</artifactId>
                 <version>${jpa-extension-starter.version}</version>
             </dependency>
             <!-- spring -->
             <dependency>
-                <groupId>org.source</groupId>
+                <groupId>io.github.dao1230source</groupId>
                 <artifactId>spring-extension-starter</artifactId>
                 <version>${spring-extension-starter.version}</version>
             </dependency>
             <!-- utility -->
             <dependency>
-                <groupId>org.source</groupId>
+                <groupId>io.github.dao1230source</groupId>
                 <artifactId>utility</artifactId>
                 <version>${org.source.utility.version}</version>
             </dependency>
             <!-- web -->
             <dependency>
-                <groupId>org.source</groupId>
+                <groupId>io.github.dao1230source</groupId>
                 <artifactId>web-extension-starter</artifactId>
                 <version>${web-extension-starter.version}</version>
             </dependency>
