@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.dao1230source</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.0.2-beta</version>
+    <packaging>pom</packaging>
+
+    <name>parent</name>
+    <description>parent pom.xml of io.github.dao1230source</description>
+    <url>https://github.com/Dao1230source/spring-cache-configure-starter.git</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Zeng FuGen</name>
+            <email>dao1230.source@gmail.com</email>
+            <organization>dao1230</organization>
+            <organizationUrl>https://github.com/Dao1230source</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/Dao1230source/spring-cache-configure-starter.git</connection>
+        <developerConnection>scm:git:ssh://github.com:Dao1230source/spring-cache-configure-starter.git
+        </developerConnection>
+        <url>https://github.com/Dao1230source/spring-cache-configure-starter/tree/master</url>
+    </scm>
+
+    <properties>
+        <!--系统模块-->
+        <org.source.user-api.version>0.0.1-SNAPSHOT</org.source.user-api.version>
+        <org.source.user-facade.version>0.0.1-SNAPSHOT</org.source.user-facade.version>
+        <!-- business -->
+        <biz-web-starter.version>0.0.1-SNAPSHOT</biz-web-starter.version>
+        <biz-web-api.version>0.0.1-SNAPSHOT</biz-web-api.version>
+        <biz-spring-starter.version>0.0.1-SNAPSHOT</biz-spring-starter.version>
+        <!-- jpa -->
+        <jpa-extension-starter.version>0.0.1-SNAPSHOT</jpa-extension-starter.version>
+        <!-- log -->
+        <data-change-log-starter.version>0.0.1-SNAPSHOT</data-change-log-starter.version>
+        <!-- spring-->
+        <spring-extension-starter.version>0.0.1-SNAPSHOT</spring-extension-starter.version>
+        <!-- utility -->
+        <org.source.utility.version>0.0.1-SNAPSHOT</org.source.utility.version>
+        <!-- web -->
+        <web-extension-starter.version>0.0.1-SNAPSHOT</web-extension-starter.version>
+        <!--maven-->
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--spring boot/cloud-->
+        <spring-cloud.version>2022.0.3</spring-cloud.version>
+        <spring-boot.version>3.1.0</spring-boot.version>
+        <!-- plugin -->
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <!--  spring alibaba -->
+        <alibaba-nacos-discovery.version>2022.0.0.0-RC2</alibaba-nacos-discovery.version>
+        <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
+        <!--外部jar-->
+        <mysql-connector-java.version>8.2.0</mysql-connector-java.version>
+        <org.projectlombok.version>1.18.24</org.projectlombok.version>
+        <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <org.slf4j-api.version>2.0.6</org.slf4j-api.version>
+        <org.jetbrains.annotations.version>24.0.1</org.jetbrains.annotations.version>
+        <apche-commons-lang3.version>3.12.0</apche-commons-lang3.version>
+        <apche-commons-collections4.version>4.4</apche-commons-collections4.version>
+        <redisson.version>3.20.0</redisson.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
+        <org.yaml.snakeyaml.version>2.0</org.yaml.snakeyaml.version>
+        <io.netty.netty-handler.version>4.1.94.final</io.netty.netty-handler.version>
+        <com.squareup.retrofit2.version>2.9.0</com.squareup.retrofit2.version>
+        <com.squareup.okio.okio-jvm.version>3.4.0</com.squareup.okio.okio-jvm.version>
+        <!-- json -->
+        <jackson-datatype-jsr310.version>2.14.1</jackson-datatype-jsr310.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- business -->
+            <dependency>
+                <groupId>org.source</groupId>
+                <artifactId>biz-web-starter</artifactId>
+                <version>${biz-web-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.source</groupId>
+                <artifactId>biz-web-api</artifactId>
+                <version>${biz-web-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.source</groupId>
+                <artifactId>biz-spring-starter</artifactId>
+                <version>${biz-spring-starter.version}</version>
+            </dependency>
+            <!-- jpa -->
+            <dependency>
+                <groupId>org.source</groupId>
+                <artifactId>jpa-extension-starter</artifactId>
+                <version>${jpa-extension-starter.version}</version>
+            </dependency>
+            <!-- spring -->
+            <dependency>
+                <groupId>org.source</groupId>
+                <artifactId>spring-extension-starter</artifactId>
+                <version>${spring-extension-starter.version}</version>
+            </dependency>
+            <!-- utility -->
+            <dependency>
+                <groupId>org.source</groupId>
+                <artifactId>utility</artifactId>
+                <version>${org.source.utility.version}</version>
+            </dependency>
+            <!-- web -->
+            <dependency>
+                <groupId>org.source</groupId>
+                <artifactId>web-extension-starter</artifactId>
+                <version>${web-extension-starter.version}</version>
+            </dependency>
+            <!--spring cloud 版本依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- use log4j2 instead logback -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!-- alibaba nacos-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${alibaba-nacos-discovery.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
+            </dependency>
+            <!-- datasource -->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <!-- lombok  -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <scope>compile</scope>
+                <version>${org.projectlombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${org.slf4j-api.version}</version>
+            </dependency>
+            <!-- utilities -->
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${org.jetbrains.annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apche-commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${apche-commons-collections4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${org.mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${org.mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-mapstruct-binding</artifactId>
+                <version>${lombok-mapstruct-binding.version}</version>
+            </dependency>
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.yaml</groupId>
+                        <artifactId>snakeyaml</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.netty</groupId>
+                        <artifactId>netty-handler</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${org.yaml.snakeyaml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-handler</artifactId>
+                <version>${io.netty.netty-handler.version}</version>
+            </dependency>
+            <!-- okhttp -->
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>retrofit</artifactId>
+                <version>${com.squareup.retrofit2.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.squareup.okio</groupId>
+                        <artifactId>okio-jvm</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okio</groupId>
+                <artifactId>okio-jvm</artifactId>
+                <version>${com.squareup.okio.okio-jvm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-jackson</artifactId>
+                <version>${com.squareup.retrofit2.version}</version>
+            </dependency>
+            <!-- others -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson-datatype-jsr310.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!-- 打包必备 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven-deploy-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                    <configuration>
+                        <attach>true</attach>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!--   javadoc插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <doclint>none</doclint>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.sonatype.central</groupId>
+                    <artifactId>central-publishing-maven-plugin</artifactId>
+                    <version>0.5.0</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <publishingServerId>central</publishingServerId>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>3.2.4</version>
+                    <executions>
+                        <execution>
+                            <id>sign-artifacts</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                        <annotationProcessorPaths>
+                            <!--
+                            configuration-processor 本质是一个annotation processor行为，
+                            如果配置了annotationProcessorPaths，也应该添加configuration-processor
+                            否则不能生成metadata.json文件
+                            -->
+                            <path>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-configuration-processor</artifactId>
+                                <version>${spring-boot.version}</version>
+                            </path>
+                            <path>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-autoconfigure-processor</artifactId>
+                                <version>${spring-boot.version}</version>
+                            </path>
+                            <!-- map-struct -->
+                            <path>
+                                <groupId>org.mapstruct</groupId>
+                                <artifactId>mapstruct-processor</artifactId>
+                                <version>${org.mapstruct.version}</version>
+                            </path>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${org.projectlombok.version}</version>
+                            </path>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok-mapstruct-binding</artifactId>
+                                <version>${lombok-mapstruct-binding.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
