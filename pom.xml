@@ -6,37 +6,11 @@
 
     <groupId>io.github.dao1230source</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <packaging>pom</packaging>
 
-    <name>parent</name>
-    <description>parent pom of io.github.dao1230source</description>
-    <url>https://github.com/Dao1230source/parent.git</url>
-
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>Zeng FuGen</name>
-            <email>dao1230.source@gmail.com</email>
-            <organization>dao1230</organization>
-            <organizationUrl>https://github.com/Dao1230source</organizationUrl>
-        </developer>
-    </developers>
-
-    <scm>
-        <connection>scm:git:git://github.com/Dao1230source/parent.git</connection>
-        <developerConnection>scm:git:ssh://Dao1230source/parent.git</developerConnection>
-        <url>https://github.com/Dao1230source/parent/tree/master</url>
-    </scm>
-
     <properties>
-        <io.github.dao1230source-parent.version>0.0.5</io.github.dao1230source-parent.version>
+        <io.github.dao1230source-parent.version>0.0.6</io.github.dao1230source-parent.version>
         <!-- jpa -->
         <jpa-extension-starter.version>${io.github.dao1230source-parent.version}</jpa-extension-starter.version>
         <!-- spring-->
@@ -76,6 +50,7 @@
         <com.squareup.okio.okio-jvm.version>3.4.0</com.squareup.okio.okio-jvm.version>
         <!-- json -->
         <jackson-datatype-jsr310.version>2.14.1</jackson-datatype-jsr310.version>
+        <datasource-proxy.version>1.9</datasource-proxy.version>
     </properties>
 
     <dependencies>
@@ -261,9 +236,40 @@
                 <artifactId>jackson-datatype-jsr310</artifactId>
                 <version>${jackson-datatype-jsr310.version}</version>
             </dependency>
+            <dependency>
+                <groupId>net.ttddyy</groupId>
+                <artifactId>datasource-proxy</artifactId>
+                <version>${datasource-proxy.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
+
+    <name>parent</name>
+    <description>parent pom of io.github.dao1230source</description>
+    <url>https://github.com/Dao1230source/parent.git</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Zeng FuGen</name>
+            <email>dao1230.source@gmail.com</email>
+            <organization>dao1230</organization>
+            <organizationUrl>https://github.com/Dao1230source</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/Dao1230source/parent.git</connection>
+        <developerConnection>scm:git:ssh://Dao1230source/parent.git</developerConnection>
+        <url>https://github.com/Dao1230source/parent/tree/master</url>
+    </scm>
     <build>
         <plugins>
             <!-- 打包必备 -->
@@ -371,6 +377,7 @@
                     <configuration>
                         <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
+                        <parameters>true</parameters>
                         <annotationProcessorPaths>
                             <!--
                             configuration-processor 本质是一个annotation processor行为，
