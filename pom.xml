@@ -6,19 +6,18 @@
 
     <groupId>io.github.dao1230source</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.8</version>
     <packaging>pom</packaging>
 
     <properties>
-        <io.github.dao1230source-parent.version>0.0.6</io.github.dao1230source-parent.version>
         <!-- jpa -->
-        <jpa-extension-starter.version>${io.github.dao1230source-parent.version}</jpa-extension-starter.version>
+        <jpa-extension-starter.version>0.0.6</jpa-extension-starter.version>
         <!-- spring-->
-        <spring-extension-starter.version>${io.github.dao1230source-parent.version}</spring-extension-starter.version>
+        <spring-extension-starter.version>0.0.8</spring-extension-starter.version>
         <!-- utility -->
-        <org.source.utility.version>${io.github.dao1230source-parent.version}</org.source.utility.version>
+        <org.source.utility.version>0.0.6</org.source.utility.version>
         <!-- web -->
-        <web-extension-starter.version>${io.github.dao1230source-parent.version}</web-extension-starter.version>
+        <web-extension-starter.version>0.0.8</web-extension-starter.version>
         <!--maven-->
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
