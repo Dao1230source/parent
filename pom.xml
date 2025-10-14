@@ -6,21 +6,30 @@
 
     <groupId>io.github.dao1230source</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.11</version>
+    <version>0.0.12</version>
     <packaging>pom</packaging>
 
     <properties>
-        <!-- jpa -->
-        <jpa-extension-starter.version>0.0.11</jpa-extension-starter.version>
-        <!-- spring-->
-        <spring-extension-starter.version>0.0.11</spring-extension-starter.version>
         <!-- utility -->
-        <org.source.utility.version>0.0.11</org.source.utility.version>
+        <org.source.utility.version>0.0.12</org.source.utility.version>
+        <!-- spring-->
+        <spring-extension-starter.version>0.0.12</spring-extension-starter.version>
+        <spring-extension-starter-common.version>0.0.12</spring-extension-starter-common.version>
+        <spring-extension-starter-rest.version>0.0.12</spring-extension-starter-rest.version>
+        <spring-extension-starter-trace.version>0.0.12</spring-extension-starter-trace.version>
+        <spring-extension-starter-redis.version>0.0.12</spring-extension-starter-redis.version>
+        <spring-extension-starter-cache.version>0.0.12</spring-extension-starter-cache.version>
+        <spring-extension-starter-object.version>0.0.12</spring-extension-starter-object.version>
+        <spring-extension-starter-doc.version>0.0.12</spring-extension-starter-doc.version>
+        <spring-extension-starter-doc.version>0.0.12</spring-extension-starter-doc.version>
+        <spring-extension-starter-i18n.version>0.0.12</spring-extension-starter-i18n.version>
+        <spring-extension-starter-uid.version>0.0.12</spring-extension-starter-uid.version>
+        <!-- jpa -->
+        <jpa-extension-starter.version>0.0.12</jpa-extension-starter.version>
         <!-- web -->
-        <web-extension-starter.version>0.0.11</web-extension-starter.version>
+        <web-extension-starter.version>0.0.12</web-extension-starter.version>
         <!--maven-->
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <java.version>21</java.version>
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--spring boot/cloud-->
@@ -34,13 +43,14 @@
         <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
         <!--外部jar-->
         <mysql-connector-java.version>8.2.0</mysql-connector-java.version>
-        <org.projectlombok.version>1.18.24</org.projectlombok.version>
+        <org.projectlombok.version>1.18.42</org.projectlombok.version>
         <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
         <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
         <org.slf4j-api.version>2.0.6</org.slf4j-api.version>
         <org.jetbrains.annotations.version>24.0.1</org.jetbrains.annotations.version>
-        <apche-commons-lang3.version>3.12.0</apche-commons-lang3.version>
-        <apche-commons-collections4.version>4.4</apche-commons-collections4.version>
+        <apache-commons-lang3.version>3.12.0</apache-commons-lang3.version>
+        <apache-commons-collections4.version>4.4</apache-commons-collections4.version>
+        <apache-commons-pool2.version>2.12.0</apache-commons-pool2.version>
         <redisson.version>3.20.0</redisson.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <org.yaml.snakeyaml.version>2.0</org.yaml.snakeyaml.version>
@@ -65,11 +75,11 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- jpa -->
+            <!-- utility -->
             <dependency>
                 <groupId>io.github.dao1230source</groupId>
-                <artifactId>jpa-extension-starter</artifactId>
-                <version>${jpa-extension-starter.version}</version>
+                <artifactId>utility</artifactId>
+                <version>${org.source.utility.version}</version>
             </dependency>
             <!-- spring -->
             <dependency>
@@ -77,11 +87,56 @@
                 <artifactId>spring-extension-starter</artifactId>
                 <version>${spring-extension-starter.version}</version>
             </dependency>
-            <!-- utility -->
             <dependency>
                 <groupId>io.github.dao1230source</groupId>
-                <artifactId>utility</artifactId>
-                <version>${org.source.utility.version}</version>
+                <artifactId>spring-extension-starter-common</artifactId>
+                <version>${spring-extension-starter-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-rest</artifactId>
+                <version>${spring-extension-starter-rest.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-trace</artifactId>
+                <version>${spring-extension-starter-trace.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-cache</artifactId>
+                <version>${spring-extension-starter-cache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-redis</artifactId>
+                <version>${spring-extension-starter-redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-object</artifactId>
+                <version>${spring-extension-starter-object.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-doc</artifactId>
+                <version>${spring-extension-starter-doc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-i18n</artifactId>
+                <version>${spring-extension-starter-i18n.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-uid</artifactId>
+                <version>${spring-extension-starter-uid.version}</version>
+            </dependency>
+            <!-- jpa -->
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>jpa-extension-starter</artifactId>
+                <version>${jpa-extension-starter.version}</version>
             </dependency>
             <!-- web -->
             <dependency>
@@ -159,12 +214,17 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>${apche-commons-lang3.version}</version>
+                <version>${apache-commons-lang3.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
-                <version>${apche-commons-collections4.version}</version>
+                <version>${apache-commons-collections4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${apache-commons-pool2.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mapstruct</groupId>
@@ -394,8 +454,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <source>${maven.compiler.source}</source>
-                        <target>${maven.compiler.target}</target>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
                         <parameters>true</parameters>
                         <annotationProcessorPaths>
                             <!--
