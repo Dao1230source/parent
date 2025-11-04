@@ -60,6 +60,7 @@
         <!-- json -->
         <jackson-datatype-jsr310.version>2.14.1</jackson-datatype-jsr310.version>
         <datasource-proxy.version>1.9</datasource-proxy.version>
+        <yitter-idgenerator.version>1.0.6</yitter-idgenerator.version>
     </properties>
 
     <dependencies>
@@ -70,16 +71,6 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure-processor</artifactId>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
@@ -309,6 +300,11 @@
                 <groupId>net.ttddyy</groupId>
                 <artifactId>datasource-proxy</artifactId>
                 <version>${datasource-proxy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.yitter</groupId>
+                <artifactId>yitter-idgenerator</artifactId>
+                <version>${yitter-idgenerator.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
