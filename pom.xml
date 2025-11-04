@@ -21,7 +21,7 @@
         <spring-extension-starter-cache.version>0.0.12</spring-extension-starter-cache.version>
         <spring-extension-starter-object.version>0.0.12</spring-extension-starter-object.version>
         <spring-extension-starter-doc.version>0.0.12</spring-extension-starter-doc.version>
-        <spring-extension-starter-doc.version>0.0.12</spring-extension-starter-doc.version>
+        <spring-extension-starter-log.version>0.0.12</spring-extension-starter-log.version>
         <spring-extension-starter-i18n.version>0.0.12</spring-extension-starter-i18n.version>
         <spring-extension-starter-uid.version>0.0.12</spring-extension-starter-uid.version>
         <!-- jpa -->
@@ -132,6 +132,11 @@
                 <groupId>io.github.dao1230source</groupId>
                 <artifactId>spring-extension-starter-uid</artifactId>
                 <version>${spring-extension-starter-uid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dao1230source</groupId>
+                <artifactId>spring-extension-starter-log</artifactId>
+                <version>${spring-extension-starter-log.version}</version>
             </dependency>
             <!-- jpa -->
             <dependency>
