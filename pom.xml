@@ -11,26 +11,26 @@
 
     <properties>
         <!-- utility -->
-        <org.source.utility.version>${project.version}</org.source.utility.version>
+        <org.source.utility.version>0.0.12</org.source.utility.version>
         <!-- spring-->
-        <spring-extension-starter.version>${project.version}</spring-extension-starter.version>
-        <spring-extension-starter-common.version>${project.version}</spring-extension-starter-common.version>
-        <spring-extension-starter-rest.version>${project.version}</spring-extension-starter-rest.version>
-        <spring-extension-starter-trace.version>${project.version}</spring-extension-starter-trace.version>
-        <spring-extension-starter-redis.version>${project.version}</spring-extension-starter-redis.version>
-        <spring-extension-starter-cache.version>${project.version}</spring-extension-starter-cache.version>
-        <spring-extension-starter-object.version>${project.version}</spring-extension-starter-object.version>
-        <spring-extension-starter-doc.version>${project.version}</spring-extension-starter-doc.version>
-        <spring-extension-starter-log.version>${project.version}</spring-extension-starter-log.version>
-        <spring-extension-starter-i18n.version>${project.version}</spring-extension-starter-i18n.version>
-        <spring-extension-starter-uid.version>${project.version}</spring-extension-starter-uid.version>
-        <spring-extension-starter-stream.version>${project.version}</spring-extension-starter-stream.version>
-        <spring-extension-starter-stream-core.version>${project.version}</spring-extension-starter-stream-core.version>
-        <spring-extension-starter-stream-rest.version>${project.version}</spring-extension-starter-stream-rest.version>
+        <spring-extension-starter.version>0.0.12</spring-extension-starter.version>
+        <spring-extension-starter-common.version>0.0.12</spring-extension-starter-common.version>
+        <spring-extension-starter-rest.version>0.0.12</spring-extension-starter-rest.version>
+        <spring-extension-starter-trace.version>0.0.12</spring-extension-starter-trace.version>
+        <spring-extension-starter-redis.version>0.0.12</spring-extension-starter-redis.version>
+        <spring-extension-starter-cache.version>0.0.12</spring-extension-starter-cache.version>
+        <spring-extension-starter-object.version>0.0.12</spring-extension-starter-object.version>
+        <spring-extension-starter-doc.version>0.0.12</spring-extension-starter-doc.version>
+        <spring-extension-starter-log.version>0.0.12</spring-extension-starter-log.version>
+        <spring-extension-starter-i18n.version>0.0.12</spring-extension-starter-i18n.version>
+        <spring-extension-starter-uid.version>0.0.12</spring-extension-starter-uid.version>
+        <spring-extension-starter-stream.version>0.0.12</spring-extension-starter-stream.version>
+        <spring-extension-starter-stream-core.version>0.0.12</spring-extension-starter-stream-core.version>
+        <spring-extension-starter-stream-rest.version>0.0.12</spring-extension-starter-stream-rest.version>
         <!-- jpa -->
-        <jpa-extension-starter.version>${project.version}</jpa-extension-starter.version>
+        <jpa-extension-starter.version>0.0.12</jpa-extension-starter.version>
         <!-- web -->
-        <web-extension-starter.version>${project.version}</web-extension-starter.version>
+        <web-extension-starter.version>0.0.12</web-extension-starter.version>
         <!--maven-->
         <java.version>21</java.version>
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
